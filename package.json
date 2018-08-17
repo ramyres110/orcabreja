@@ -1,0 +1,16 @@
+{
+    "name": "orcabreja",
+    "version": "1.0.0",
+    "description": "Aplicativo PWA para auxiliar no momento de decisão de qual cerveja e quantidade levar. Economizar na cerveja!",
+    "main": "build/js/app",
+    "scripts": {
+        "compile": "tsc -p .",
+        "build": "",
+        "start": "",
+        "test": ""
+    },
+    "dependencies": {
+        "gulp": "^3.9.1",
+        "typescript": "^3.0.1"
+    }
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Orçabreja App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ebb30c">
+    <link rel="manifest" href="./manifest.json" />
+    <script async src="./js/pwacompat.min.js"></script>
+    <link rel="icon" type="image/png" href="./img/icon-96.png" />
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="./css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav>
+        <div class="nav-wrapper yellow darken-3">
+            <a href="/" class="brand-logo">Orçabreja</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <a class="" href="#budgets">
+                        <i class="material-icons left">insert_chart</i>Orçamentos</a>
+                </li>
+                <li>
+                    <a class="" href="#stores">
+                        <i class="material-icons left">store</i>Locais</a>
+                </li>
+                <li>
+                    <a class="" href="#beers">
+                        <i class="material-icons left">loyalty</i>Cervejas</a>
+                </li>
+                <li>
+                    <a class="sidenav-close" href="#packages">
+                        <i class="material-icons left">shopping_basket</i>Pacotes</a>
+                </li>
+                <li>
+                    <a class="sidenav-close modal-trigger" href="#brands">
+                        <i class="material-icons left">panorama_horizontal</i>Marcas</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- sidenav -->
+    <ul class="sidenav" id="mobile-demo">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="img/bubble-beer-glass-260.jpg">
+                </div>
+                <h1>&nbsp;</h1>
+            </div>
+        </li>
+        <li>
+            <a class="sidenav-close" href="#budgets">
+                <i class="material-icons">insert_chart</i>Orçamentos</a>
+        </li>
+        <li>
+            <a class="sidenav-close" href="#stores">
+                <i class="material-icons">store</i>Locais</a>
+        </li>
+        <li>
+            <a class="sidenav-close" href="#beers">
+                <i class="material-icons">loyalty</i>Cervejas</a>
+        </li>
+        <li>
+            <a class="sidenav-close" href="#packages">
+                <i class="material-icons">shopping_basket</i>Pacotes</a>
+        </li>
+        <li>
+            <a class="sidenav-close modal-trigger" href="#brands">
+                <i class="material-icons">panorama_horizontal</i>Marcas</a>
+        </li>
+    </ul>
+    <!-- float button -->
+    <div class="fixed-action-btn">
+        <a class="waves-effect waves-light btn-floating btn-large yellow darken-3">
+            <i class="large material-icons">add</i>
+        </a>
+        <ul>
+            <li>
+                <a class="btn-floating yellow darken-3" title="Orçamentos">
+                    <i class="material-icons">insert_chart</i>
+                </a>
+            </li>
+            <li>
+                <a class="btn-floating yellow darken-3" title="Locais">
+                    <i class="material-icons">store</i>
+                </a>
+            </li>
+            <li>
+                <a class="btn-floating yellow darken-3" title="Cervejas">
+                    <i class="material-icons">loyalty</i>
+                </a>
+            </li>
+            <li>
+                <a class="btn-floating yellow darken-3" title="Pacotes">
+                    <i class="material-icons">shopping_basket</i>
+                </a>
+            </li>
+            <li>
+                <a class="btn-floating yellow darken-3 modal-trigger" href="#brands" title="Marcas">
+                    <i class="material-icons">panorama_horizontal</i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- register brands -->
+    <div id="brands" class="modal">
+        <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    <div class="container">
+        <div id="register-budgets"></div>
+        <div id="register-stores"></div>
+        <div id="register-beers"></div>
+        <div id="register-packages"></div>
+    </div>
+    <!-- scripts -->
+    <script src="./js/materialize.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

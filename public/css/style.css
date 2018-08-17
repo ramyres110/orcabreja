@@ -1,0 +1,22 @@
+/* html{
+    background-color: #f9a825;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0;
+    background-color: #fff;
+    text-align: justify;
+} */
+
+.align-center-xy{
+    height: 100vh;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
