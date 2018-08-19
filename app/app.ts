@@ -30,10 +30,14 @@ namespace nsorcabreja {
                 try {
                     this.loadBrands();
                     this.loadSizes();
+                    this.loadBudgets();
                 } finally {
                     this.view.prepareModalBrands(this.brands);
                     this.view.prepareSelectBrands(this.brands);
                     this.view.prepareSelectSizes(this.sizes);
+                    this.budgets.forEach((bud: Budget) => {
+                        this.view.addResultCard(bud);
+                    });
                     this.view.init();
                 }
             });
@@ -48,6 +52,7 @@ namespace nsorcabreja {
             }
             let budget = new Budget(new Beer(new_beer));
             this.budgets.push(budget);
+            this.saveBudgets()
             this.view.addResultCard(budget);
         }
 
@@ -55,6 +60,8 @@ namespace nsorcabreja {
             this.budgets.forEach((budget: Budget, index: number) => {
                 if (budget.getId() === id) {
                     this.budgets.splice(index, 1);
+                    this.saveBudgets();
+                    return;
                 }
             });
         }
@@ -75,6 +82,16 @@ namespace nsorcabreja {
             }
         }
 
+        loadBudgets() {
+            let budgets_str = localStorage.getItem('budgets');
+            let bud = JSON.parse(budgets_str);
+            if (bud) {
+                bud.forEach((b: any) => {
+                    this.budgets.push(new Budget(b.beer));
+                });
+            }
+        }
+
         loadDatabase() {
             return new Promise((resolve: any, reject: any) => {
                 let xhr = new XMLHttpRequest();
@@ -88,6 +105,10 @@ namespace nsorcabreja {
                 xhr.open("GET", "/database.json", true);
                 xhr.send();
             })
+        }
+
+        saveBudgets(): any {
+            localStorage.setItem('budgets', JSON.stringify(this.budgets));
         }
     }
 

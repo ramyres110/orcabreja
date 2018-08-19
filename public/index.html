@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head lang="pt-br">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Orçabreja App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#ebb30c">
+    <title>Orçabreja App</title>
     <link rel="manifest" href="./manifest.json" />
     <script async src="./js/pwacompat.min.js"></script>
     <link rel="icon" type="image/png" href="./img/icon-96.png" />
@@ -19,7 +18,38 @@
 
 <body class=" grey darken-4">
     <!-- modal -->
-    <!-- register brands -->
+    <!-- register -->
+    <div id="register" class="modal">
+        <div class="modal-content p-1" id="modal-register">
+            <div class="input-field">
+                <select class="icons" id="select-brands-collection" autofocus>
+                    <option value="" disabled selected>Selecione a marca</option>
+                </select>
+            </div>
+            <div class="input-field">
+                <select id="select-size-collection">
+                    <option value="" disabled selected>Selecione o tamanho</option>
+                </select>
+            </div>
+            <div class="input-field">
+                <input id="input-quantity" type="number">
+                <label for="input-quantity">Quantidade</label>
+            </div>
+            <div class="input-field">
+                <input id="input-price" type="number">
+                <label for="input-price">Valor (R$)</label>
+            </div>
+            <br>
+            <br>
+            <p class="center">
+                <button class="modal-close waves-effect waves-light btn-large" id="btn-calcule">
+                    <i class="material-icons left">functions</i>
+                    Calcular
+                </button>
+            </p>
+        </div>
+    </div>
+    <!-- brands -->
     <div id="brands" class="modal modal-fixed-footer">
         <div class="modal-content p-1" id="modal-brands">
             <h4>Marcas</h4>
@@ -71,14 +101,15 @@
         </div>
     </div>
     <!-- navbar -->
-    <nav>
-        <div class="nav-wrapper yellow darken-3">
-            <a href="/" class="brand-logo">Orçabreja</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-                <i class="material-icons">menu</i>
-            </a>
-            <ul class="right hide-on-med-and-down">
-                <!-- <li>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper yellow darken-3">
+                <a href="/" class="brand-logo">Orçabreja</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <!-- <li>
                     <a class="" href="#budgets">
                         <i class="material-icons left">insert_chart</i>Orçamentos</a>
                 </li>
@@ -94,13 +125,14 @@
                     <a class="sidenav-close" href="#packages">
                         <i class="material-icons left">shopping_basket</i>Pacotes</a>
                 </li> -->
-                <li>
-                    <a class="sidenav-close modal-trigger" href="#brands">
-                        <i class="material-icons left">panorama_horizontal</i>Marcas</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+                    <li>
+                        <a class="sidenav-close modal-trigger" href="#brands">
+                            <i class="material-icons left">panorama_horizontal</i>Marcas</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
     <!-- sidenav -->
     <ul class="sidenav grey darken-4" id="mobile-demo">
         <li>
@@ -142,6 +174,12 @@
         </li>
     </ul>
     <!-- float button -->
+    <div class="fixed-action-btn">
+
+        <a class="waves-effect waves-light btn-floating btn-large yellow darken-3 sidenav-close modal-trigger" href="#register">
+            <i class="large material-icons">add</i>
+        </a>
+    </div>
     <!-- <div class="fixed-action-btn">
         <a class="waves-effect waves-light btn-floating btn-large yellow darken-3">
             <i class="large material-icons">add</i>
@@ -177,43 +215,11 @@
     <!-- Main -->
     <div class="container">
         <div class="row" id="row-content">
-            <div class="col s12 m6">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="input-field">
-                            <select class="icons" id="select-brands-collection">
-                                <option value="" disabled selected>Selecione a marca</option>
-                            </select>
-                        </div>
-                        <div class="input-field">
-                            <select id="select-size-collection">
-                                <option value="" disabled selected>Selecione o tamanho</option>
-                            </select>
-                        </div>
-                        <div class="input-field">
-                            <input id="input-quantity" type="number">
-                            <label for="input-quantity">Quantidade</label>
-                        </div>
-                        <div class="input-field">
-                            <input id="input-price" type="number">
-                            <label for="input-price">Valor (R$)</label>
-                        </div>
-                    </div>
-                    <div class="card-action center">
-                        <button class="waves-effect waves-light btn-large" id="btn-calcule">
-                            <i class="material-icons left">functions</i>
-                            Calcular
-                        </button>
-                    </div>
-                </div>
-            </div>
         </div>
-
-    </div>
-    <!-- scripts -->
-    <script src="./js/materialize.min.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/script.js"></script>
+        <!-- scripts -->
+        <script src="./js/materialize.min.js"></script>
+        <script src="./js/main.js"></script>
+        <script src="./js/script.js"></script>
 </body>
 
 </html>

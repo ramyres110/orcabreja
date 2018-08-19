@@ -20,9 +20,21 @@ namespace nsorcabreja {
             this.contentRow = document.querySelector('#row-content');
             this.modalBrandCollection = document.querySelector('#modal-brands-collection');
             this.selectBrandCollection = document.querySelector('#select-brands-collection');
+            this.selectBrandCollection.addEventListener('keypress', (ev: KeyboardEvent) => {
+                this.inputCalculeEnterClick(ev.keyCode);
+            })
             this.selectSizeCollection = document.querySelector('#select-size-collection');
+            this.selectSizeCollection.addEventListener('keypress', (ev: KeyboardEvent) => {
+                this.inputCalculeEnterClick(ev.keyCode);
+            })
             this.inputCount = document.querySelector('#input-quantity');
+            this.inputCount.addEventListener('keypress', (ev: KeyboardEvent) => {
+                this.inputCalculeEnterClick(ev.keyCode);
+            })
             this.inputPrice = document.querySelector('#input-price');
+            this.inputPrice.addEventListener('keypress', (ev: KeyboardEvent) => {
+                this.inputCalculeEnterClick(ev.keyCode);
+            })
             this.btnCalcule = document.querySelector('#btn-calcule');
             this.btnCalcule.addEventListener('click', (ev: Event) => {
                 ev.preventDefault();
@@ -37,44 +49,24 @@ namespace nsorcabreja {
                 preventScrolling: true
             };
             const sidenav = document.querySelectorAll('.sidenav');
-            const sidenavInstances = M.Sidenav.init(sidenav, optionsSidenav);
-
+            M.Sidenav.init(sidenav, optionsSidenav);
             const optionsfixbtn = {
                 direction: 'up',
                 hoverEnabled: false
             };
             const fixedbutton = document.querySelectorAll('.fixed-action-btn');
-            const fixedbuttonInstances = M.FloatingActionButton.init(fixedbutton, optionsfixbtn);
-
+            M.FloatingActionButton.init(fixedbutton, optionsfixbtn);
             const modaloptions = {};
             const modals = document.querySelectorAll('.modal');
-            const modalsInstances = M.Modal.init(modals, modaloptions);
-
+            M.Modal.init(modals, modaloptions);
             const optionsparallax = {};
             const parallax = document.querySelectorAll('.parallax');
-            const paralaxInstances = M.Parallax.init(parallax, optionsparallax);
-
+            M.Parallax.init(parallax, optionsparallax);
             const optionsSelects = {};
             const selects = document.querySelectorAll('select');
-            const selectInstances = M.FormSelect.init(selects, optionsSelects);
-
+            M.FormSelect.init(selects, optionsSelects);
             this.loadDropdowns();
-
             M.updateTextFields();
-        }
-
-        private loadButtonDeleteCard() {
-            let elements = document.querySelectorAll('#btn-delete-card');
-            for (let i = 0; i < elements.length; i++) {
-                const element = elements[i];
-                element.addEventListener('click', (ev: MouseEvent) => {
-                    ev.preventDefault();
-                    let target: any = ev.target;
-                    let id = "#card" + target.getAttribute('data-target');
-                    document.querySelector(id).remove();
-                    this.control.removeBudgetById(id.split('card')[1]);
-                })
-            }
         }
 
         private loadDropdowns() {
@@ -83,6 +75,12 @@ namespace nsorcabreja {
             };
             const dropdowns = document.querySelectorAll('.dropdown-trigger');
             const dropdownsInstances = M.Dropdown.init(dropdowns, dropOptions);
+        }
+
+        inputCalculeEnterClick(keyCode: number) {
+            if (keyCode === 13) {
+                this.btnCalcule.click();
+            }
         }
 
         btnCalculeClick() {
@@ -147,41 +145,74 @@ namespace nsorcabreja {
         addResultCard(budget: Budget) {
             let cardCol = document.createElement('div');
             cardCol.classList.add('col', 's12', 'm6');
-            cardCol.id = "card" + budget.getId();
-            let template = `
-                <div class="card">
-                    <div class="card-content">
-                        <span class="card-title grey-text text-darken-4">
-                            ${budget.getBeer().getBrand().getName()}
-                            <i class="material-icons right dropdown-trigger" data-target='card-option'>more_vert</i>
-                            <ul id='card-option' class='dropdown-content'>
-                                <li>
-                                    <a href="#!" id="btn-delete-card" data-target=${budget.getId()}>Excluir</a>
-                                </li>
-                            </ul>
-                        </span>
-                        <h5 class="center">
-                            ${budget.getBeer().getCount()} x ${budget.getBeer().getSize().getPacking()} (
-                                ${budget.getBeer().getSize().getSize()}${budget.getBeer().getSize().getUnity()}
-                            ) por R$ ${budget.getBeer().getPrice()}
-                        </h5>
-                        <p class="center"> Valor Unidade R$ ${(budget.getPriceUnit() + "").substring(0, 5)}</p>
-                        <div class="row center">
-                            <div class="col s6">
-                                <p class="">Preço da ml</p>
-                                <h4>R$ ${(budget.getPriceMl() + "").substring(0, 7)}...</h4>
-                            </div>
-                            <div class="col s6">
-                                <p>Preço do lt</p>
-                                <h4>R$ ${(budget.getPriceLt() + "").substring(0, 5)}</h4>
-                            </div>
-                        </div>
+            let card = document.createElement('div');
+            card.classList.add('card');
+
+            let cardContent = document.createElement('div');
+            cardContent.classList.add('card-content');
+
+            let cardTitle = document.createElement('span');
+            cardTitle.classList.add('card-title', 'grey-text', 'text-darken-4')
+
+            let img = document.createElement('img');
+            img.src = "/img/brands/" + budget.getBeer().getBrand().getLabel();
+            img.classList.add('circle', 'responsive-img', 'left');
+            img.width = 32;
+            cardTitle.appendChild(img);
+
+            cardTitle.appendChild(document.createTextNode(budget.getBeer().getBrand().getName()));
+
+            let icon = document.createElement('i');
+            icon.classList.add('material-icons', 'right', 'dropdown-trigger')
+            icon.innerHTML = 'more_vert';
+            icon.setAttribute('data-target', 'card-option-' + budget.getId());
+            cardTitle.appendChild(icon);
+
+            let ul = document.createElement('ul');
+            ul.id = 'card-option-' + budget.getId();
+            ul.classList.add('dropdown-content');
+            let li = document.createElement('li');
+            let btnDeleteCard = document.createElement('a');
+            btnDeleteCard.href = "#!";
+            btnDeleteCard.innerHTML = "Excluir";
+            btnDeleteCard.addEventListener('click', (ev: MouseEvent) => {
+                ev.preventDefault();
+                cardCol.remove();
+                this.control.removeBudgetById(budget.getId());
+            });
+            li.appendChild(btnDeleteCard);
+            ul.appendChild(li);
+            cardTitle.appendChild(ul);
+
+            let cardInfo = document.createElement('div');
+            cardInfo.innerHTML = `
+                <h6 class="center">
+                    <strong>
+                        ${budget.getBeer().getCount()} x ${budget.getBeer().getSize().getPacking()}
+                        (${budget.getBeer().getSize().getSize()}${budget.getBeer().getSize().getUnity()}) 
+                        por R$ ${budget.getBeer().getPrice()}
+                    </strong>
+                </h6>
+                <p class="center"> Quantidade total ${budget.getTotalMl() / 1000}lt </p>
+                <p class="center"> Valor unidade R$ ${(budget.getPriceUnit() + "").substring(0, 5)}</p>
+                <div class="row center">
+                    <div class="col s6">
+                        <p>Preço da ml</p>
+                        <h4><small>R$</small><strong> ${(budget.getPriceMl() + "").substring(0, 6)} </strong></h4>
                     </div>
-                </div>`;
-            cardCol.innerHTML = template;
-            this.contentRow.appendChild(cardCol);
+                    <div class="col s6">
+                        <p>Preço do lt</p>
+                        <h4><small>R$</small><strong> ${(budget.getPriceLt() + "").substring(0, 5)} </strong></h4>
+                    </div>
+                </div>
+            `;
+
+            cardContent.appendChild(cardTitle);
+            cardContent.appendChild(cardInfo);
+            card.appendChild(cardContent);
+            cardCol.appendChild(card);
+            this.contentRow.insertBefore(cardCol, this.contentRow.firstChild);
             this.loadDropdowns();
-            this.loadButtonDeleteCard();
         }
     }
 }
