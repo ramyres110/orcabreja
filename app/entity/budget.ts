@@ -9,10 +9,12 @@ namespace nsorcabreja {
         private priceMl: number;
         private priceLt: number;
 
-        constructor(beer: Beer) {
+        constructor(beer: Beer, calcule: boolean = true) {
             this.id = new Date().getTime();
             this.beer = new Beer(beer);
-            this.calcule();
+            if (calcule) {
+                this.calcule();
+            }
         }
 
         private calcule() {
@@ -43,6 +45,18 @@ namespace nsorcabreja {
         }
         getPriceLt(): number {
             return this.priceLt;
+        }
+        setTotalMl(value: number) {
+            this.totalMl = value;
+        }
+        setPriceUnit(value: number) {
+            this.priceUnit = value;
+        }
+        setPriceMl(value: number) {
+            this.priceMl = value;
+        }
+        setPriceLt(value: number) {
+            this.priceLt = value;
         }
     }
 }

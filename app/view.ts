@@ -70,9 +70,7 @@ namespace nsorcabreja {
         }
 
         private loadDropdowns() {
-            const dropOptions = {
-                alignment: 'bottom'
-            };
+            const dropOptions = {};
             const dropdowns = document.querySelectorAll('.dropdown-trigger');
             const dropdownsInstances = M.Dropdown.init(dropdowns, dropOptions);
         }
@@ -173,10 +171,11 @@ namespace nsorcabreja {
             ul.classList.add('dropdown-content');
             let li = document.createElement('li');
             let btnDeleteCard = document.createElement('a');
-            btnDeleteCard.href = "#!";
+            btnDeleteCard.href = "#";
             btnDeleteCard.innerHTML = "Excluir";
             btnDeleteCard.addEventListener('click', (ev: MouseEvent) => {
-                ev.preventDefault();
+                // ev.preventDefault();
+                console.log('Delete ', cardCol);
                 cardCol.remove();
                 this.control.removeBudgetById(budget.getId());
             });
@@ -198,7 +197,7 @@ namespace nsorcabreja {
                 <div class="row center">
                     <div class="col s6">
                         <p>Preço da ml</p>
-                        <h4><small>R$</small><strong> ${(budget.getPriceMl() + "").substring(0, 6)} </strong></h4>
+                        <h4><small>R$</small><strong> ${(budget.getPriceMl() + "").substring(0, 5)} </strong></h4>
                     </div>
                     <div class="col s6">
                         <p>Preço do lt</p>

@@ -87,7 +87,12 @@ namespace nsorcabreja {
             let bud = JSON.parse(budgets_str);
             if (bud) {
                 bud.forEach((b: any) => {
-                    this.budgets.push(new Budget(b.beer));
+                    let budget = new Budget(b.beer, false);
+                    budget.setPriceLt(b.priceLt)
+                    budget.setPriceMl(b.priceMl)
+                    budget.setPriceUnit(b.priceUnit)
+                    budget.setTotalMl(b.totalMl)
+                    this.budgets.push(budget);
                 });
             }
         }

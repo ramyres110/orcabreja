@@ -12,7 +12,7 @@ namespace nsorcabreja {
         constructor(beer?: Beer) {
             if (beer) {
                 this.brand = new Brand(beer.brand);
-                this.size = beer.size;
+                this.size = new Size(beer.size);
                 this.price = beer.price;
                 this.count = beer.count;
             }
