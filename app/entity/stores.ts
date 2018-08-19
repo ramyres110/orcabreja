@@ -1,11 +1,18 @@
 namespace nsorcabreja {
     export class Store {
-        constructor() {
-
+        private name: string;
+        constructor(store?: Store) {
+            if (store) {
+                this.name = store.name;
+            }
         }
 
-        getAll(): Array<Store> {
-            return [];
+        getName() {
+            return this.name;
+        }
+
+        setName(name: string) {
+            this.name = name;
         }
     }
 }

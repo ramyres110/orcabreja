@@ -1,0 +1,352 @@
+{
+    "sizes": [
+        {
+            "packing": "Lata",
+            "size": 269,
+            "unity": "ml"
+        },
+        {
+            "packing": "Lata",
+            "size": 350,
+            "unity": "ml"
+        },
+        {
+            "packing": "Lata",
+            "size": 473,
+            "unity": "ml"
+        },
+        {
+            "packing": "Lata",
+            "size": 550,
+            "unity": "ml"
+        },
+        {
+            "packing": "Long Neck",
+            "size": 275,
+            "unity": "ml"
+        },
+        {
+            "packing": "Long Neck",
+            "size": 343,
+            "unity": "ml"
+        },
+        {
+            "packing": "Garrafa",
+            "size": 355,
+            "unity": "ml"
+        },
+        {
+            "packing": "Garrafa",
+            "size": 600,
+            "unity": "ml"
+        },
+        {
+            "packing": "Garrafa",
+            "size": 1000,
+            "unity": "ml"
+        },
+        {
+            "packing": "Garrafa",
+            "size": 300,
+            "unity": "ml"
+        }
+    ],
+    "brands": [
+        {
+            "name": "Adriática",
+            "label": ""
+        },
+        {
+            "name": "Antarctica",
+            "label": ""
+        },
+        {
+            "name": "Antarctica Original",
+            "label": ""
+        },
+        {
+            "name": "Avós",
+            "label": ""
+        },
+        {
+            "name": "Bavaria",
+            "label": ""
+        },
+        {
+            "name": "Bierland",
+            "label": ""
+        },
+        {
+            "name": "Bier Hoff",
+            "label": ""
+        },
+        {
+            "name": "Bier Nards",
+            "label": ""
+        },
+        {
+            "name": "Blondine",
+            "label": ""
+        },
+        {
+            "name": "Bohemia",
+            "label": ""
+        },
+        {
+            "name": "Brahma",
+            "label": ""
+        },
+        {
+            "name": "Caracu",
+            "label": ""
+        },
+        {
+            "name": "Cícera",
+            "label": ""
+        },
+        {
+            "name": "Colorado",
+            "label": ""
+        },
+        {
+            "name": "Crystal",
+            "label": ""
+        },
+        {
+            "name": "Dádiva",
+            "label": ""
+        },
+        {
+            "name": "Destroyer",
+            "label": ""
+        },
+        {
+            "name": "Hausen Bier",
+            "label": ""
+        },
+        {
+            "name": "Heilige",
+            "label": ""
+        },
+        {
+            "name": "Imigração",
+            "label": ""
+        },
+        {
+            "name": "Itaipava",
+            "label": ""
+        },
+        {
+            "name": "KüD",
+            "label": ""
+        },
+        {
+            "name": "Madrecita",
+            "label": ""
+        },
+        {
+            "name": "Nova Skin",
+            "label": ""
+        },
+        {
+            "name": "Original",
+            "label": ""
+        },
+        {
+            "name": "Polar",
+            "label": ""
+        },
+        {
+            "name": "Pratinha",
+            "label": ""
+        },
+        {
+            "name": "Roleta Russa",
+            "label": ""
+        },
+        {
+            "name": "Serramalte",
+            "label": ""
+        },
+        {
+            "name": "Skol",
+            "label": ""
+        },
+        {
+            "name": "Suméria",
+            "label": ""
+        },
+        {
+            "name": "Synergy",
+            "label": ""
+        },
+        {
+            "name": "Tito Bier",
+            "label": ""
+        },
+        {
+            "name": "Três Fidalgas",
+            "label": ""
+        },
+        {
+            "name": "Tupiniquim",
+            "label": ""
+        },
+        {
+            "name": "Union",
+            "label": ""
+        },
+        {
+            "name": "Wäls",
+            "label": ""
+        },
+        {
+            "name": "Becasse",
+            "label": ""
+        },
+        {
+            "name": "Beck's",
+            "label": ""
+        },
+        {
+            "name": "Belle Vue",
+            "label": ""
+        },
+        {
+            "name": "Birra del Borgo",
+            "label": ""
+        },
+        {
+            "name": "Bluepoint",
+            "label": ""
+        },
+        {
+            "name": "Budweiser",
+            "label": ""
+        },
+        {
+            "name": "Bud Light",
+            "label": ""
+        },
+        {
+            "name": "Chimay",
+            "label": ""
+        },
+        {
+            "name": "Corona",
+            "label": ""
+        },
+        {
+            "name": "Delirium",
+            "label": ""
+        },
+        {
+            "name": "Deus",
+            "label": ""
+        },
+        {
+            "name": "Diekirch",
+            "label": ""
+        },
+        {
+            "name": "Duvel",
+            "label": ""
+        },
+        {
+            "name": "Franziskaner",
+            "label": ""
+        },
+        {
+            "name": "Goose Island",
+            "label": ""
+        },
+        {
+            "name": "Gouden Carolus",
+            "label": ""
+        },
+        {
+            "name": "Hertog Jan",
+            "label": ""
+        },
+        {
+            "name": "Hoegaarden",
+            "label": ""
+        },
+        {
+            "name": "Jupiler",
+            "label": ""
+        },
+        {
+            "name": "Kona",
+            "label": ""
+        },
+        {
+            "name": "Kwak",
+            "label": ""
+        },
+        {
+            "name": "La Chouffe",
+            "label": ""
+        },
+        {
+            "name": "Leffe",
+            "label": ""
+        },
+        {
+            "name": "Lowenbrau",
+            "label": ""
+        },
+        {
+            "name": "Maredsous",
+            "label": ""
+        },
+        {
+            "name": "Norteña",
+            "label": ""
+        },
+        {
+            "name": "Patagonia",
+            "label": ""
+        },
+        {
+            "name": "Quilmes",
+            "label": ""
+        },
+        {
+            "name": "Redhook",
+            "label": ""
+        },
+        {
+            "name": "Sea Dog",
+            "label": ""
+        },
+        {
+            "name": "Shipyard",
+            "label": ""
+        },
+        {
+            "name": "Stella Artois",
+            "label": ""
+        },
+        {
+            "name": "St. Pauli",
+            "label": ""
+        },
+        {
+            "name": "Spaten",
+            "label": ""
+        },
+        {
+            "name": "Tripel Karmeliet",
+            "label": ""
+        },
+        {
+            "name": "Vedett",
+            "label": ""
+        },
+        {
+            "name": "Widmer Brothers",
+            "label": ""
+        }
+    ]
+}

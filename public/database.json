@@ -1,0 +1,129 @@
+{
+    "sizes": [
+        {
+            "packing": "Lata",
+            "size": 269,
+            "unity": "ml"
+        },
+        {
+            "packing": "Lata",
+            "size": 350,
+            "unity": "ml"
+        },
+        {
+            "packing": "Lata",
+            "size": 473,
+            "unity": "ml"
+        },
+        {
+            "packing": "Lata",
+            "size": 550,
+            "unity": "ml"
+        },
+        {
+            "packing": "Long Neck",
+            "size": 275,
+            "unity": "ml"
+        },
+        {
+            "packing": "Long Neck",
+            "size": 343,
+            "unity": "ml"
+        },
+        {
+            "packing": "Garrafa",
+            "size": 300,
+            "unity": "ml"
+        },
+        {
+            "packing": "Garrafa",
+            "size": 355,
+            "unity": "ml"
+        },
+        {
+            "packing": "Garrafa",
+            "size": 600,
+            "unity": "ml"
+        },
+        {
+            "packing": "Garrafa",
+            "size": 1000,
+            "unity": "ml"
+        },
+        {
+            "packing": "Garrafa",
+            "size": 2000,
+            "unity": "ml"
+        }
+    ],
+    "brands": [
+        {
+            "name": "Amstel",
+            "label": "amstel.jpg"
+        },
+        {
+            "name": "Antarctica",
+            "label": "antarctica.jpg"
+        },
+        {
+            "name": "Bavaria",
+            "label": "bavaria.jpg"
+        },
+        {
+            "name": "Bohemia",
+            "label": "bohemia.jpg"
+        },
+        {
+            "name": "Brahma",
+            "label": "brahma.jpg"
+        },
+        {
+            "name": "Budweiser",
+            "label": "budweiser.jpg"
+        },
+        {
+            "name": "Bud Light",
+            "label": "bud_light.jpg"
+        },
+        {
+            "name": "Caracu",
+            "label": ""
+        },
+        {
+            "name": "Corona",
+            "label": ""
+        },
+        {
+            "name": "Crystal",
+            "label": ""
+        },
+        {
+            "name": "Heineken",
+            "label": "heineken.jpg"
+        },
+        {
+            "name": "Itaipava",
+            "label": ""
+        },
+        {
+            "name": "Nova Skin",
+            "label": ""
+        },
+        {
+            "name": "Original",
+            "label": ""
+        },
+        {
+            "name": "Quilmes",
+            "label": ""
+        },
+        {
+            "name": "Skol",
+            "label": "skol.jpg"
+        },
+        {
+            "name": "Stella Artois",
+            "label": "stella_artois.jpg"
+        }
+    ]
+}

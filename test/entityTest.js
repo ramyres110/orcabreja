@@ -1,0 +1,23 @@
+var assert = require('assert');
+describe('Entities Tesst', function () {
+    describe('#Beer', function () {
+        it('should return -1 when the value is not present', function () {
+            assert.equal([1, 2, 3].indexOf(4), -1);
+        });
+    });
+    describe('#Brands', function () {
+        it('should return -1 when the value is not present', function () {
+            assert.equal([1, 2, 3].indexOf(4), -1);
+        });
+    });
+    describe('#Budgets', function () {
+        it('should return -1 when the value is not present', function () {
+            assert.equal([1, 2, 3].indexOf(4), -1);
+        });
+    });
+    describe('#Stores', function () {
+        it('should return -1 when the value is not present', function () {
+            assert.equal([1, 2, 3].indexOf(4), -1);
+        });
+    });
+});

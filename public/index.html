@@ -17,7 +17,59 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
 </head>
 
-<body>
+<body class=" grey darken-4">
+    <!-- modal -->
+    <!-- register brands -->
+    <div id="brands" class="modal modal-fixed-footer">
+        <div class="modal-content p-1" id="modal-brands">
+            <h4>Marcas</h4>
+            <ul class="collection" id="modal-brands-collection">
+            </ul>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    <!-- register brands -->
+    <div id="about" class="modal modal-fixed-footer">
+        <div class="modal-content p-1" id="modal-about">
+            <h4>Sobre</h4>
+            <h5>
+                Tsort
+            </h5>
+            <h6>
+                Desenvolvimento em Ordem &reg; 2018
+            </h6>
+            <br>
+            <p class="center">
+                "Materializar ideias, contruir ferramentas e contribuir para um mundo melhor"
+            </p>
+            <br>
+            <p class="grey-text">
+                Ramyres P. Aquino
+            </p>
+            <p>
+                <a class="grey-text" href="https://tsort.com.br">
+                    <i class="material-icons left">http</i>tsort.com.br
+                </a>
+            </p>
+            <p>
+                <a class="grey-text" href="https://fb.com/ramyres110">
+                    <i class="material-icons left">thumb_up</i>@ramyres110
+                </a>
+            </p>
+            <p>
+                <a class="grey-text" href="mailto:ramyres90@gmail.com">
+                    <i class="material-icons left">mail</i>ramyres90@gmail.com
+                </a>
+            </p>
+            <p>
+            </p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
     <!-- navbar -->
     <nav>
         <div class="nav-wrapper yellow darken-3">
@@ -26,7 +78,7 @@
                 <i class="material-icons">menu</i>
             </a>
             <ul class="right hide-on-med-and-down">
-                <li>
+                <!-- <li>
                     <a class="" href="#budgets">
                         <i class="material-icons left">insert_chart</i>Orçamentos</a>
                 </li>
@@ -41,7 +93,7 @@
                 <li>
                     <a class="sidenav-close" href="#packages">
                         <i class="material-icons left">shopping_basket</i>Pacotes</a>
-                </li>
+                </li> -->
                 <li>
                     <a class="sidenav-close modal-trigger" href="#brands">
                         <i class="material-icons left">panorama_horizontal</i>Marcas</a>
@@ -50,8 +102,11 @@
         </div>
     </nav>
     <!-- sidenav -->
-    <ul class="sidenav" id="mobile-demo">
+    <ul class="sidenav grey darken-4" id="mobile-demo">
         <li>
+            <a href="/" class="white-text brand-logo">Orçabreja</a>
+        </li>
+        <!-- <li>
             <div class="user-view">
                 <div class="background">
                     <img src="img/bubble-beer-glass-260.jpg">
@@ -74,14 +129,20 @@
         <li>
             <a class="sidenav-close" href="#packages">
                 <i class="material-icons">shopping_basket</i>Pacotes</a>
+        </li> -->
+        <li>
+            <a class="sidenav-close modal-trigger white-text" href="#brands">
+                <i class="material-icons white-text">panorama_horizontal</i>Marcas
+            </a>
         </li>
         <li>
-            <a class="sidenav-close modal-trigger" href="#brands">
-                <i class="material-icons">panorama_horizontal</i>Marcas</a>
+            <a class="sidenav-close modal-trigger white-text" href="#about">
+                <i class="material-icons white-text">info_outline</i>Sobre
+            </a>
         </li>
     </ul>
     <!-- float button -->
-    <div class="fixed-action-btn">
+    <!-- <div class="fixed-action-btn">
         <a class="waves-effect waves-light btn-floating btn-large yellow darken-3">
             <i class="large material-icons">add</i>
         </a>
@@ -112,27 +173,47 @@
                 </a>
             </li>
         </ul>
-    </div>
-    <!-- register brands -->
-    <div id="brands" class="modal">
-        <div class="modal-content">
-            <h4>Modal Header</h4>
-            <p>A bunch of text</p>
-        </div>
-        <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-        </div>
-    </div>
+    </div> -->
+    <!-- Main -->
     <div class="container">
-        <div id="register-budgets"></div>
-        <div id="register-stores"></div>
-        <div id="register-beers"></div>
-        <div id="register-packages"></div>
+        <div class="row" id="row-content">
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="input-field">
+                            <select class="icons" id="select-brands-collection">
+                                <option value="" disabled selected>Selecione a marca</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <select id="select-size-collection">
+                                <option value="" disabled selected>Selecione o tamanho</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <input id="input-quantity" type="number">
+                            <label for="input-quantity">Quantidade</label>
+                        </div>
+                        <div class="input-field">
+                            <input id="input-price" type="number">
+                            <label for="input-price">Valor (R$)</label>
+                        </div>
+                    </div>
+                    <div class="card-action center">
+                        <button class="waves-effect waves-light btn-large" id="btn-calcule">
+                            <i class="material-icons left">functions</i>
+                            Calcular
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
     <!-- scripts -->
     <script src="./js/materialize.min.js"></script>
-    <script src="./js/script.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

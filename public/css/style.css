@@ -20,3 +20,10 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+.p-0{
+    padding: 0!important;
+}
+.p-1{
+    padding: 5px!important;
+}

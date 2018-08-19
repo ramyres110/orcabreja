@@ -1,11 +1,12 @@
 {
     "compilerOptions": {
+        "alwaysStrict": true,
         "module": "system",
         "noImplicitAny": true,
         "removeComments": true,
         "preserveConstEnums": true,
-        "outFile": "./public/js/main.js",
-        "sourceMap": true
+        "outFile": "./app/js/main.js",
+        "sourceMap": false
     },
     "include": [
         "./app/**/*"
