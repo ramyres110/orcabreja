@@ -10,7 +10,7 @@
     <meta name="author" content="Ramyres P. Aquino">
     <title>Orçabreja App</title>
 
-    <link rel="manifest" href="./manifest.json" />
+    <link rel="manifest" href="manifest.webmanifest" />
     <script async src="./js/pwacompat.min.js"></script>
     <!-- include icon also from manifest -->
     <link rel="icon" type="image/png" href="./img/icon-192.png" sizes="192x192" />
@@ -230,10 +230,8 @@
         </div>
 
         <!-- Install -->
-        <div id="installModal" style="padding: 0px 5px 25px 5px;background-color: #FFF; position: fixed;bottom: 0; width: 90%;margin: 0 auto;z-index: 9999;display: none;">
-            <p>Deseja instalar este app?</p>
-            <button id="installBtnCancel" class="waves-effect waves-light btn-large white teal-text">Cancel</button>
-            <button id="installBtnAdd" class="waves-effect waves-light btn-large right">Install</button>
+        <div id=installer>
+            <button class=button>Install</button>
         </div>
         <!-- scripts -->
         <script src="./js/materialize.min.js"></script>

@@ -2,7 +2,7 @@ var cacheName = 'orcabreja';
 var filesToCache = [
     '/',
     '/index.html',
-    '/manifest.json',
+    '/manifest.webmanifest',
     '/database.json',
     '/css/materialize.min.css',
     '/css/style.css',
