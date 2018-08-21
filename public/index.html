@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
 
-<head lang="pt-br">
+<head lang="pt">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Orçabreja - App para economizar na escolha da cerveja!">
+    <meta name="keywords" content="Cerveja, Economizar, Barato, Lata, Litrão">
+    <meta name="author" content="Ramyres P. Aquino">
     <title>Orçabreja App</title>
-    <script async src="./js/pwacompat.min.js"></script>
+
     <link rel="manifest" href="./manifest.json" />
-    <link rel="icon" type="image/png" href="./img/icon-96.png" />
+    <script async src="./js/pwacompat.min.js"></script>
+    <!-- include icon also from manifest -->
+    <link rel="icon" type="image/png" href="./img/icon-192.png" sizes="192x192" />
+
+
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -110,24 +117,29 @@
                 </a>
                 <ul class="right hide-on-med-and-down">
                     <!-- <li>
-                    <a class="" href="#budgets">
-                        <i class="material-icons left">insert_chart</i>Orçamentos</a>
-                </li>
-                <li>
-                    <a class="" href="#stores">
-                        <i class="material-icons left">store</i>Locais</a>
-                </li>
-                <li>
-                    <a class="" href="#beers">
-                        <i class="material-icons left">loyalty</i>Cervejas</a>
-                </li>
-                <li>
-                    <a class="sidenav-close" href="#packages">
-                        <i class="material-icons left">shopping_basket</i>Pacotes</a>
-                </li> -->
+                            <a class="" href="#budgets">
+                                <i class="material-icons left">insert_chart</i>Orçamentos</a>
+                        </li>
+                        <li>
+                            <a class="" href="#stores">
+                                <i class="material-icons left">store</i>Locais</a>
+                        </li>
+                        <li>
+                            <a class="" href="#beers">
+                                <i class="material-icons left">loyalty</i>Cervejas</a>
+                        </li>
+                        <li>
+                            <a class="sidenav-close" href="#packages">
+                                <i class="material-icons left">shopping_basket</i>Pacotes</a>
+                        </li> 
+                    -->
                     <li>
                         <a class="sidenav-close modal-trigger" href="#brands">
                             <i class="material-icons left">panorama_horizontal</i>Marcas</a>
+                    </li>
+                    <li>
+                        <a class="sidenav-close modal-trigger" href="#brands">
+                            <i class="material-icons left">info_outline</i>Sobre</a>
                     </li>
                 </ul>
             </div>
@@ -215,6 +227,13 @@
     <!-- Main -->
     <div class="container">
         <div class="row" id="row-content">
+        </div>
+
+        <!-- Install -->
+        <div id="installModal" style="padding: 0px 5px 25px 5px;background-color: #FFF; position: fixed;bottom: 0; width: 90%;margin: 0 auto;z-index: 9999;display: none;">
+            <p>Deseja instalar este app?</p>
+            <button id="installBtnCancel" class="waves-effect waves-light btn-large white teal-text">Cancel</button>
+            <button id="installBtnAdd" class="waves-effect waves-light btn-large right">Install</button>
         </div>
         <!-- scripts -->
         <script src="./js/materialize.min.js"></script>
