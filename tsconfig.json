@@ -5,7 +5,7 @@
         "noImplicitAny": true,
         "removeComments": true,
         "preserveConstEnums": true,
-        "outFile": "./app/js/main.js",
+        "outFile": "./public/js/main.js",
         "sourceMap": false
     },
     "include": [

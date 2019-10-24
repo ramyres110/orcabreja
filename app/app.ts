@@ -1,6 +1,6 @@
 /**
  * @author Ramyres Pereira Aquino
- * @version 1.0.0
+ * @version 2.0.0
  * @since 16/08/2018
  * @class OrcaBreja
  */
@@ -35,6 +35,7 @@ namespace nsorcabreja {
                     this.view.prepareModalBrands(this.brands);
                     this.view.prepareSelectBrands(this.brands);
                     this.view.prepareSelectSizes(this.sizes);
+
                     this.budgets.forEach((bud: Budget) => {
                         this.view.addResultCard(bud);
                     });
@@ -83,6 +84,10 @@ namespace nsorcabreja {
         }
 
         loadBudgets() {
+            // TODO:
+            // Precisar criar outra maneira de salvar local
+            // pois o localStorage tem um limit por chave-valor
+            // limitado
             let budgets_str = localStorage.getItem('budgets');
             let bud = JSON.parse(budgets_str);
             if (bud) {
