@@ -10,9 +10,11 @@
         "start": "nodemon .",
         "test": "mocha"
     },
-    "dependencies": {},
+    "dependencies": {
+    },
     "devDependencies": {
         "express": "^4.16.3",
+        "firebase-tools": "^7.6.1",
         "gulp": "^3.9.1",
         "gulp-uglyfly": "^1.4.2",
         "mocha": "^5.2.0",

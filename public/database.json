@@ -7,6 +7,11 @@
         },
         {
             "packing": "Lata",
+            "size": 310,
+            "unity": "ml"
+        },
+        {
+            "packing": "Lata",
             "size": 350,
             "unity": "ml"
         },
@@ -66,6 +71,10 @@
             "label": "antarctica.jpg"
         },
         {
+            "name": "Antarctica Subzero",
+            "label": ""
+        },
+        {
             "name": "Bavaria",
             "label": "bavaria.jpg"
         },
@@ -102,11 +111,19 @@
             "label": "heineken.jpg"
         },
         {
+            "name": "Imperial",
+            "label": ""
+        },
+        {
+            "name": "Império",
+            "label": ""
+        },
+        {
             "name": "Itaipava",
             "label": ""
         },
         {
-            "name": "Nova Skin",
+            "name": "Nova Schin",
             "label": ""
         },
         {

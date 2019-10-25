@@ -2,3 +2,5 @@
 *main.js*
 node_modules/
 app/js/
+*.log
+.firebase/
